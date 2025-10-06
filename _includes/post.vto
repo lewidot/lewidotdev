@@ -1,0 +1,31 @@
+---
+title: Default page title
+layout: base.vto
+---
+
+<header>
+  <a href="/" class="home-link">← lewi.dev</a>
+</header>
+<main>
+    <h1>{{ title }}</h1>
+  <span class="meta">{{ date |> date('yyyy/MM/dd') }}</span>
+  <div class="post" >{{ content }}</div>
+
+  <nav class="post-nav">
+      {{- set previousPost = search.previousPage(url, "type=post") }}
+      {{- if previousPost }}
+      <a class="prev" href="{{ previousPost.url }}" rel="prev">
+        ←
+        <span >{{ previousPost.title }}</span>
+      {{ /if }}
+
+      {{- set nextPost = search.nextPage(url, "type=post") }}
+      {{- if nextPost }}
+      <a class="next" href="{{ nextPost.url }}" rel="next">
+        <span >{{ nextPost.title }}</span>
+        →
+      </a>
+
+      {{ /if }}
+  </nav>
+</main>
