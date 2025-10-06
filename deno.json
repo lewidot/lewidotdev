@@ -28,5 +28,9 @@
         "no-import-prefix"
       ]
     }
+  },
+  "deploy": {
+    "org": "lewidot",
+    "app": "lewidotdev"
   }
 }
