@@ -13,7 +13,8 @@
     --font-serif:
         "Charter", "Iowan Old Style", "Palatino Linotype", "Palatino",
         "Garamond", serif;
-    --font-mono: "SF Mono", "Monaco", "Inconsolata", "Consolas", monospace;
+    --font-mono:
+        ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
